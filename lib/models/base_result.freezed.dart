@@ -27,8 +27,12 @@ mixin _$BaseResult {
   @JsonKey(name: "data", fromJson: toDartModel)
   DartTypeModel get data => throw _privateConstructorUsedError;
 
+  /// Serializes this BaseResult to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BaseResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BaseResultCopyWith<BaseResult> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,6 +61,8 @@ class _$BaseResultCopyWithImpl<$Res, $Val extends BaseResult>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BaseResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class _$BaseResultCopyWithImpl<$Res, $Val extends BaseResult>
     ) as $Val);
   }
 
+  /// Create a copy of BaseResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DartTypeModelCopyWith<$Res> get data {
@@ -114,6 +122,8 @@ class __$$BaseResultImplCopyWithImpl<$Res>
       _$BaseResultImpl _value, $Res Function(_$BaseResultImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BaseResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -176,11 +186,13 @@ class _$BaseResultImpl extends _BaseResult {
             (identical(other.data, data) || other.data == data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, code, message, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BaseResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BaseResultImplCopyWith<_$BaseResultImpl> get copyWith =>
@@ -214,8 +226,11 @@ abstract class _BaseResult extends BaseResult {
   @override
   @JsonKey(name: "data", fromJson: toDartModel)
   DartTypeModel get data;
+
+  /// Create a copy of BaseResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BaseResultImplCopyWith<_$BaseResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

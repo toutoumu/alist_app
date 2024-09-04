@@ -25,7 +25,9 @@ mixin _$MenuState {
   @igFromJsonAndToJson
   BuildContext? get context => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MenuState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MenuStateCopyWith<MenuState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +54,8 @@ class _$MenuStateCopyWithImpl<$Res, $Val extends MenuState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MenuState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -104,6 +108,8 @@ class __$$MenuStateImplCopyWithImpl<$Res>
       _$MenuStateImpl _value, $Res Function(_$MenuStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MenuState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -180,7 +186,9 @@ class _$MenuStateImpl extends _MenuState {
   int get hashCode => Object.hash(
       runtimeType, leftMenuExpand, pointOffset, buttonOffset, context);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MenuState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MenuStateImplCopyWith<_$MenuStateImpl> get copyWith =>
@@ -197,8 +205,8 @@ abstract class _MenuState extends MenuState {
 
   @override
   @JsonKey(name: 'leftMenuExpand')
-  bool get leftMenuExpand;
-  @override //在面板中的全局未知
+  bool get leftMenuExpand; //在面板中的全局未知
+  @override
   @igFromJsonAndToJson
   Offset get pointOffset;
   @override
@@ -207,8 +215,11 @@ abstract class _MenuState extends MenuState {
   @override
   @igFromJsonAndToJson
   BuildContext? get context;
+
+  /// Create a copy of MenuState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MenuStateImplCopyWith<_$MenuStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

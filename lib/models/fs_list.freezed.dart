@@ -31,8 +31,12 @@ mixin _$FsListParam {
   @JsonKey(name: 'refresh')
   bool get refresh => throw _privateConstructorUsedError;
 
+  /// Serializes this FsListParam to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FsListParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FsListParamCopyWith<FsListParam> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -61,6 +65,8 @@ class _$FsListParamCopyWithImpl<$Res, $Val extends FsListParam>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FsListParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -119,6 +125,8 @@ class __$$FsListParamImplCopyWithImpl<$Res>
       _$FsListParamImpl _value, $Res Function(_$FsListParamImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FsListParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -201,12 +209,14 @@ class _$FsListParamImpl extends _FsListParam {
             (identical(other.refresh, refresh) || other.refresh == refresh));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, path, password, page, perPage, refresh);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FsListParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FsListParamImplCopyWith<_$FsListParamImpl> get copyWith =>
@@ -247,8 +257,11 @@ abstract class _FsListParam extends FsListParam {
   @override
   @JsonKey(name: 'refresh')
   bool get refresh;
+
+  /// Create a copy of FsListParam
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FsListParamImplCopyWith<_$FsListParamImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -270,8 +283,12 @@ mixin _$FsListResult {
   @JsonKey(name: 'provider')
   String get provider => throw _privateConstructorUsedError;
 
+  /// Serializes this FsListResult to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FsListResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FsListResultCopyWith<FsListResult> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -300,6 +317,8 @@ class _$FsListResultCopyWithImpl<$Res, $Val extends FsListResult>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FsListResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -358,6 +377,8 @@ class __$$FsListResultImplCopyWithImpl<$Res>
       _$FsListResultImpl _value, $Res Function(_$FsListResultImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FsListResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -440,7 +461,7 @@ class _$FsListResultImpl extends _FsListResult {
                 other.provider == provider));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -450,7 +471,9 @@ class _$FsListResultImpl extends _FsListResult {
       write,
       provider);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FsListResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FsListResultImplCopyWith<_$FsListResultImpl> get copyWith =>
@@ -491,8 +514,11 @@ abstract class _FsListResult extends FsListResult {
   @override
   @JsonKey(name: 'provider')
   String get provider;
+
+  /// Create a copy of FsListResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FsListResultImplCopyWith<_$FsListResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

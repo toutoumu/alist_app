@@ -1,16 +1,16 @@
 part of 'part.dart';
 
 ///创建新的配置弹窗
-class CreateNewDomainWidget extends StatefulWidget {
+class CreateNewDomainWidget extends ConsumerStatefulWidget {
   final DomainAccount? updateDomain;
 
   const CreateNewDomainWidget({super.key, this.updateDomain});
 
   @override
-  State<CreateNewDomainWidget> createState() => _CreateNewDomainWidgetState();
+  ConsumerState<CreateNewDomainWidget> createState() => _CreateNewDomainWidgetState();
 }
 
-class _CreateNewDomainWidgetState extends State<CreateNewDomainWidget> {
+class _CreateNewDomainWidgetState extends ConsumerState<CreateNewDomainWidget> {
   late DomainAccount _account = widget.updateDomain ?? DomainAccount();
 
   late final _nameCtrl = TextEditingController(text: widget.updateDomain?.name);
@@ -33,7 +33,6 @@ class _CreateNewDomainWidgetState extends State<CreateNewDomainWidget> {
             Focus(
               onKeyEvent: (node, event) {
                 final tvEvent = TvKey.create(event);
-                print('->${tvEvent}');
                 tvEvent.whenOrNull(
                   down: () {
                     _focusNode.requestFocus();
@@ -58,7 +57,6 @@ class _CreateNewDomainWidgetState extends State<CreateNewDomainWidget> {
             Focus(
               onKeyEvent: (node, event) {
                 final tvEvent = TvKey.create(event);
-                print('->2${tvEvent}');
                 tvEvent.whenOrNull(down: () {
                   FocusManager.instance.primaryFocus?.focusInDirection(TraversalDirection.down);
                 },);
@@ -104,7 +102,7 @@ class _CreateNewDomainWidgetState extends State<CreateNewDomainWidget> {
             const SizedBox(
               height: 12,
             ),
-            TextButton(onPressed: context.pop, child: const Text('取消')).maxWidthButton
+            const TextButton(onPressed: SmartDialog.dismiss, child: Text('取消')).maxWidthButton
           ],
         ),
       ),
@@ -113,8 +111,6 @@ class _CreateNewDomainWidgetState extends State<CreateNewDomainWidget> {
 
   Future<void> _create() async {
     Logger().d('create...');
-    final ctx = context.nav;
-
     if (_account.valid.not) {
       toast('配置验证失败');
       return;
@@ -134,7 +130,8 @@ class _CreateNewDomainWidgetState extends State<CreateNewDomainWidget> {
     } else {
       await GetIt.instance.get<AccountManager>().createNew(_account);
     }
-    ctx.pop(true);
+    ref.invalidate(sitesStateProvider);
+    SmartDialog.dismiss();
   }
 
   @override

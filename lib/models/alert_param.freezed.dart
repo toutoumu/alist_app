@@ -25,8 +25,12 @@ mixin _$AlertParam {
   @JsonKey(name: 'content')
   String get content => throw _privateConstructorUsedError;
 
+  /// Serializes this AlertParam to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AlertParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AlertParamCopyWith<AlertParam> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$AlertParamCopyWithImpl<$Res, $Val extends AlertParam>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AlertParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$AlertParamImplCopyWithImpl<$Res>
       _$AlertParamImpl _value, $Res Function(_$AlertParamImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AlertParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -143,11 +151,13 @@ class _$AlertParamImpl extends _AlertParam {
             (identical(other.content, content) || other.content == content));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, title, content);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AlertParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AlertParamImplCopyWith<_$AlertParamImpl> get copyWith =>
@@ -176,8 +186,11 @@ abstract class _AlertParam extends AlertParam {
   @override
   @JsonKey(name: 'content')
   String get content;
+
+  /// Create a copy of AlertParam
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AlertParamImplCopyWith<_$AlertParamImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

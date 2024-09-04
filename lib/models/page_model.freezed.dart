@@ -100,7 +100,9 @@ mixin _$PageModel {
   }) =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PageModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PageModelCopyWith<PageModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -123,6 +125,8 @@ class _$PageModelCopyWithImpl<$Res, $Val extends PageModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PageModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -166,6 +170,8 @@ class __$$ApplicationMainPageImplCopyWithImpl<$Res>
       $Res Function(_$ApplicationMainPageImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PageModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -248,7 +254,9 @@ class _$ApplicationMainPageImpl extends ApplicationMainPage {
   int get hashCode =>
       Object.hash(runtimeType, active, id, child, pageType, render);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PageModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ApplicationMainPageImplCopyWith<_$ApplicationMainPageImpl> get copyWith =>
@@ -378,8 +386,11 @@ abstract class ApplicationMainPage extends PageModel {
   PageType get pageType;
   @igFreezedJson
   BuildMenuIcon? get render;
+
+  /// Create a copy of PageModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ApplicationMainPageImplCopyWith<_$ApplicationMainPageImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -409,6 +420,8 @@ class __$$ApplicationFavoritePageImplCopyWithImpl<$Res>
       $Res Function(_$ApplicationFavoritePageImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PageModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -481,7 +494,9 @@ class _$ApplicationFavoritePageImpl extends ApplicationFavoritePage {
   @override
   int get hashCode => Object.hash(runtimeType, active, id, pageType, child);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PageModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ApplicationFavoritePageImplCopyWith<_$ApplicationFavoritePageImpl>
@@ -609,8 +624,11 @@ abstract class ApplicationFavoritePage extends PageModel {
   PageType get pageType;
   @igFreezedJson
   Widget? get child;
+
+  /// Create a copy of PageModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ApplicationFavoritePageImplCopyWith<_$ApplicationFavoritePageImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -640,6 +658,8 @@ class __$$ApplicationUploadPageImplCopyWithImpl<$Res>
       $Res Function(_$ApplicationUploadPageImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PageModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -722,7 +742,9 @@ class _$ApplicationUploadPageImpl extends ApplicationUploadPage {
   int get hashCode =>
       Object.hash(runtimeType, active, child, id, pageType, render);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PageModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ApplicationUploadPageImplCopyWith<_$ApplicationUploadPageImpl>
@@ -853,8 +875,11 @@ abstract class ApplicationUploadPage extends PageModel {
   PageType get pageType;
   @igFreezedJson
   BuildMenuIcon? get render;
+
+  /// Create a copy of PageModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ApplicationUploadPageImplCopyWith<_$ApplicationUploadPageImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -880,6 +905,8 @@ class __$$ApplicationFsModelPageImplCopyWithImpl<$Res>
       $Res Function(_$ApplicationFsModelPageImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PageModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -941,7 +968,9 @@ class _$ApplicationFsModelPageImpl extends ApplicationFsModelPage {
   @override
   int get hashCode => Object.hash(runtimeType, model, active, pageType);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PageModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ApplicationFsModelPageImplCopyWith<_$ApplicationFsModelPageImpl>
@@ -1066,8 +1095,11 @@ abstract class ApplicationFsModelPage extends PageModel {
   bool get active;
   @override
   PageType get pageType;
+
+  /// Create a copy of PageModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ApplicationFsModelPageImplCopyWith<_$ApplicationFsModelPageImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1099,6 +1131,8 @@ class __$$ApplicationCustomPageImplCopyWithImpl<$Res>
       $Res Function(_$ApplicationCustomPageImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PageModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1197,7 +1231,9 @@ class _$ApplicationCustomPageImpl extends ApplicationCustomPage {
   int get hashCode => Object.hash(
       runtimeType, title, icon, pageType, child, active, id, ending);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PageModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ApplicationCustomPageImplCopyWith<_$ApplicationCustomPageImpl>
@@ -1330,8 +1366,11 @@ abstract class ApplicationCustomPage extends PageModel {
   bool get active;
   String get id;
   BuilderEndingWidget? get ending;
+
+  /// Create a copy of PageModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ApplicationCustomPageImplCopyWith<_$ApplicationCustomPageImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

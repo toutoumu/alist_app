@@ -25,8 +25,12 @@ mixin _$MyFsRemoveApiParam {
   @JsonKey(name: 'dir')
   String get dir => throw _privateConstructorUsedError;
 
+  /// Serializes this MyFsRemoveApiParam to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MyFsRemoveApiParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MyFsRemoveApiParamCopyWith<MyFsRemoveApiParam> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$MyFsRemoveApiParamCopyWithImpl<$Res, $Val extends MyFsRemoveApiParam>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MyFsRemoveApiParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$MyFsRemoveApiParamImplCopyWithImpl<$Res>
       $Res Function(_$MyFsRemoveApiParamImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MyFsRemoveApiParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -150,12 +158,14 @@ class _$MyFsRemoveApiParamImpl extends _MyFsRemoveApiParam {
             (identical(other.dir, dir) || other.dir == dir));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_names), dir);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MyFsRemoveApiParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MyFsRemoveApiParamImplCopyWith<_$MyFsRemoveApiParamImpl> get copyWith =>
@@ -185,8 +195,11 @@ abstract class _MyFsRemoveApiParam extends MyFsRemoveApiParam {
   @override
   @JsonKey(name: 'dir')
   String get dir;
+
+  /// Create a copy of MyFsRemoveApiParam
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MyFsRemoveApiParamImplCopyWith<_$MyFsRemoveApiParamImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

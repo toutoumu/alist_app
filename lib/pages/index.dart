@@ -8,6 +8,7 @@ class IndexPage extends ConsumerStatefulWidget {
 }
 
 class _IndexPageState extends ConsumerState<IndexPage> {
+
   @override
   void initState() {
     super.initState();

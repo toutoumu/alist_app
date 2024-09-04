@@ -3,6 +3,7 @@ library pages;
 import 'package:collection/collection.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dd_js_util/dd_js_util.dart';
+import 'package:dd_js_util/model/models.dart';
 import 'package:dd_js_util/theme/model.dart';
 import 'package:fast_immutable_collections/fast_immutable_collections.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';

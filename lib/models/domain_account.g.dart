@@ -306,29 +306,34 @@ const DomainAccountSchema = CollectionSchema(
       name: r'importTime',
       type: IsarType.dateTime,
     ),
-    r'label': PropertySchema(
+    r'isAdminer': PropertySchema(
       id: 5,
+      name: r'isAdminer',
+      type: IsarType.bool,
+    ),
+    r'label': PropertySchema(
+      id: 6,
       name: r'label',
       type: IsarType.string,
     ),
     r'layoutStyle': PropertySchema(
-      id: 6,
+      id: 7,
       name: r'layoutStyle',
       type: IsarType.byte,
       enumMap: _DomainAccountlayoutStyleEnumValueMap,
     ),
     r'name': PropertySchema(
-      id: 7,
+      id: 8,
       name: r'name',
       type: IsarType.string,
     ),
     r'note': PropertySchema(
-      id: 8,
+      id: 9,
       name: r'note',
       type: IsarType.string,
     ),
     r'sortType': PropertySchema(
-      id: 9,
+      id: 10,
       name: r'sortType',
       type: IsarType.byte,
       enumMap: _DomainAccountsortTypeEnumValueMap,
@@ -378,11 +383,12 @@ void _domainAccountSerialize(
   writer.writeString(offsets[2], object.domain);
   writer.writeBool(offsets[3], object.hasListeners);
   writer.writeDateTime(offsets[4], object.importTime);
-  writer.writeString(offsets[5], object.label);
-  writer.writeByte(offsets[6], object.layoutStyle.index);
-  writer.writeString(offsets[7], object.name);
-  writer.writeString(offsets[8], object.note);
-  writer.writeByte(offsets[9], object.sortType.index);
+  writer.writeBool(offsets[5], object.isAdminer);
+  writer.writeString(offsets[6], object.label);
+  writer.writeByte(offsets[7], object.layoutStyle.index);
+  writer.writeString(offsets[8], object.name);
+  writer.writeString(offsets[9], object.note);
+  writer.writeByte(offsets[10], object.sortType.index);
 }
 
 DomainAccount _domainAccountDeserialize(
@@ -397,15 +403,15 @@ DomainAccount _domainAccountDeserialize(
     domain: reader.readStringOrNull(offsets[2]) ?? '',
     id: id,
     importTime: reader.readDateTimeOrNull(offsets[4]),
-    label: reader.readStringOrNull(offsets[5]),
+    label: reader.readStringOrNull(offsets[6]),
     layoutStyle: _DomainAccountlayoutStyleValueEnumMap[
-            reader.readByteOrNull(offsets[6])] ??
+            reader.readByteOrNull(offsets[7])] ??
         FilesLayoutStyle.list,
-    name: reader.readStringOrNull(offsets[7]) ?? '',
-    note: reader.readStringOrNull(offsets[8]) ?? '',
-    sortType:
-        _DomainAccountsortTypeValueEnumMap[reader.readByteOrNull(offsets[9])] ??
-            FilesSortType.def,
+    name: reader.readStringOrNull(offsets[8]) ?? '',
+    note: reader.readStringOrNull(offsets[9]) ?? '',
+    sortType: _DomainAccountsortTypeValueEnumMap[
+            reader.readByteOrNull(offsets[10])] ??
+        FilesSortType.def,
   );
   return object;
 }
@@ -428,16 +434,18 @@ P _domainAccountDeserializeProp<P>(
     case 4:
       return (reader.readDateTimeOrNull(offset)) as P;
     case 5:
-      return (reader.readStringOrNull(offset)) as P;
+      return (reader.readBool(offset)) as P;
     case 6:
+      return (reader.readStringOrNull(offset)) as P;
+    case 7:
       return (_DomainAccountlayoutStyleValueEnumMap[
               reader.readByteOrNull(offset)] ??
           FilesLayoutStyle.list) as P;
-    case 7:
-      return (reader.readStringOrNull(offset) ?? '') as P;
     case 8:
       return (reader.readStringOrNull(offset) ?? '') as P;
     case 9:
+      return (reader.readStringOrNull(offset) ?? '') as P;
+    case 10:
       return (_DomainAccountsortTypeValueEnumMap[
               reader.readByteOrNull(offset)] ??
           FilesSortType.def) as P;
@@ -981,6 +989,16 @@ extension DomainAccountQueryFilter
         includeLower: includeLower,
         upper: upper,
         includeUpper: includeUpper,
+      ));
+    });
+  }
+
+  QueryBuilder<DomainAccount, DomainAccount, QAfterFilterCondition>
+      isAdminerEqualTo(bool value) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.equalTo(
+        property: r'isAdminer',
+        value: value,
       ));
     });
   }
@@ -1594,6 +1612,19 @@ extension DomainAccountQuerySortBy
     });
   }
 
+  QueryBuilder<DomainAccount, DomainAccount, QAfterSortBy> sortByIsAdminer() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'isAdminer', Sort.asc);
+    });
+  }
+
+  QueryBuilder<DomainAccount, DomainAccount, QAfterSortBy>
+      sortByIsAdminerDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'isAdminer', Sort.desc);
+    });
+  }
+
   QueryBuilder<DomainAccount, DomainAccount, QAfterSortBy> sortByLabel() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'label', Sort.asc);
@@ -1735,6 +1766,19 @@ extension DomainAccountQuerySortThenBy
     });
   }
 
+  QueryBuilder<DomainAccount, DomainAccount, QAfterSortBy> thenByIsAdminer() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'isAdminer', Sort.asc);
+    });
+  }
+
+  QueryBuilder<DomainAccount, DomainAccount, QAfterSortBy>
+      thenByIsAdminerDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'isAdminer', Sort.desc);
+    });
+  }
+
   QueryBuilder<DomainAccount, DomainAccount, QAfterSortBy> thenByLabel() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'label', Sort.asc);
@@ -1833,6 +1877,12 @@ extension DomainAccountQueryWhereDistinct
     });
   }
 
+  QueryBuilder<DomainAccount, DomainAccount, QDistinct> distinctByIsAdminer() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addDistinctBy(r'isAdminer');
+    });
+  }
+
   QueryBuilder<DomainAccount, DomainAccount, QDistinct> distinctByLabel(
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
@@ -1904,6 +1954,12 @@ extension DomainAccountQueryProperty
       importTimeProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'importTime');
+    });
+  }
+
+  QueryBuilder<DomainAccount, bool, QQueryOperations> isAdminerProperty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addPropertyName(r'isAdminer');
     });
   }
 

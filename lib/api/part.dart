@@ -2,6 +2,7 @@ library api;
 
 import 'package:dd_check_plugin/dd_check_plugin.dart';
 import 'package:dd_js_util/dd_js_util.dart';
+import 'package:dd_js_util/model/models.dart';
 import 'package:dio/dio.dart';
 import 'package:fast_immutable_collections/fast_immutable_collections.dart';
 import 'package:get_it/get_it.dart';
@@ -33,16 +34,16 @@ class DioInstance {
   static DioInstance get instance => GetIt.instance.get<DioInstance>();
   Dio? dio;
 
-  Future<Dio> getDio(BaseOptions options) async {
+  Future<Dio> getDio(BaseOptions options,String projectName) async {
     if (dio != null) {
       return dio!;
     }
     dio = Dio(options);
     try {
      await DdCheckPlugin().init(dio!,
-          initHost: '192.168.199.80',
+          initHost: '192.168.199.195',
           port: 9998,
-          projectName: 'alist', conectSuccess: (value) {
+          projectName: projectName, conectSuccess: (value) {
       }, timeOut: const Duration(seconds: 5));
     } on ConnectException catch (_) {
     }
@@ -75,7 +76,7 @@ abstract class MyApiBase<T> extends BaseApi<T> {
 
   @override
   Future<Dio> getDio(BaseOptions baseOptions) async {
-    return await DioInstance.instance.getDio(baseOptions);
+    return await DioInstance.instance.getDio(baseOptions,baseOptions.baseUrl);
   }
 
   @override

@@ -26,8 +26,12 @@ mixin _$AppUiSetting {
   bool get isDragging => throw _privateConstructorUsedError; //是否隐藏左侧抽屉
   bool get hideLeftMenu => throw _privateConstructorUsedError;
 
+  /// Serializes this AppUiSetting to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AppUiSetting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AppUiSettingCopyWith<AppUiSetting> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$AppUiSettingCopyWithImpl<$Res, $Val extends AppUiSetting>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AppUiSetting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -100,6 +106,8 @@ class __$$AppUiSettingImplCopyWithImpl<$Res>
       _$AppUiSettingImpl _value, $Res Function(_$AppUiSettingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AppUiSetting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -167,12 +175,14 @@ class _$AppUiSettingImpl extends _AppUiSetting {
                 other.hideLeftMenu == hideLeftMenu));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, leftMenuWidth, isDragging, hideLeftMenu);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AppUiSetting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AppUiSettingImplCopyWith<_$AppUiSettingImpl> get copyWith =>
@@ -196,15 +206,19 @@ abstract class _AppUiSetting extends AppUiSetting {
   factory _AppUiSetting.fromJson(Map<String, dynamic> json) =
       _$AppUiSettingImpl.fromJson;
 
-  @override //左侧菜单的宽度
-  @JsonKey(name: 'leftMenuWidth')
-  double get leftMenuWidth;
-  @override //是否在拖拽中
-  bool get isDragging;
-  @override //是否隐藏左侧抽屉
-  bool get hideLeftMenu;
+//左侧菜单的宽度
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(name: 'leftMenuWidth')
+  double get leftMenuWidth; //是否在拖拽中
+  @override
+  bool get isDragging; //是否隐藏左侧抽屉
+  @override
+  bool get hideLeftMenu;
+
+  /// Create a copy of AppUiSetting
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AppUiSettingImplCopyWith<_$AppUiSettingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

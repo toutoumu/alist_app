@@ -23,8 +23,12 @@ mixin _$AuthLoginResult {
   @JsonKey(name: 'token')
   String get token => throw _privateConstructorUsedError;
 
+  /// Serializes this AuthLoginResult to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AuthLoginResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AuthLoginResultCopyWith<AuthLoginResult> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$AuthLoginResultCopyWithImpl<$Res, $Val extends AuthLoginResult>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AuthLoginResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -81,6 +87,8 @@ class __$$AuthLoginResultImplCopyWithImpl<$Res>
       _$AuthLoginResultImpl _value, $Res Function(_$AuthLoginResultImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AuthLoginResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -121,11 +129,13 @@ class _$AuthLoginResultImpl extends _AuthLoginResult {
             (identical(other.token, token) || other.token == token));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, token);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AuthLoginResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AuthLoginResultImplCopyWith<_$AuthLoginResultImpl> get copyWith =>
@@ -151,8 +161,11 @@ abstract class _AuthLoginResult extends AuthLoginResult {
   @override
   @JsonKey(name: 'token')
   String get token;
+
+  /// Create a copy of AuthLoginResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AuthLoginResultImplCopyWith<_$AuthLoginResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -170,8 +183,12 @@ mixin _$AuthLoginParam {
   @JsonKey(name: 'otp_code')
   String? get otpCode => throw _privateConstructorUsedError;
 
+  /// Serializes this AuthLoginParam to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AuthLoginParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AuthLoginParamCopyWith<AuthLoginParam> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -198,6 +215,8 @@ class _$AuthLoginParamCopyWithImpl<$Res, $Val extends AuthLoginParam>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AuthLoginParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -244,6 +263,8 @@ class __$$AuthLoginParamImplCopyWithImpl<$Res>
       _$AuthLoginParamImpl _value, $Res Function(_$AuthLoginParamImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AuthLoginParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -307,11 +328,13 @@ class _$AuthLoginParamImpl extends _AuthLoginParam {
             (identical(other.otpCode, otpCode) || other.otpCode == otpCode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, username, password, otpCode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AuthLoginParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AuthLoginParamImplCopyWith<_$AuthLoginParamImpl> get copyWith =>
@@ -345,8 +368,11 @@ abstract class _AuthLoginParam extends AuthLoginParam {
   @override
   @JsonKey(name: 'otp_code')
   String? get otpCode;
+
+  /// Create a copy of AuthLoginParam
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AuthLoginParamImplCopyWith<_$AuthLoginParamImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

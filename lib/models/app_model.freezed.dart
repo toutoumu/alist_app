@@ -23,7 +23,9 @@ mixin _$AppModel {
   bool get showUploadFileWidget => throw _privateConstructorUsedError;
   bool get loginLoading => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AppModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AppModelCopyWith<AppModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -54,6 +56,8 @@ class _$AppModelCopyWithImpl<$Res, $Val extends AppModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AppModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +91,8 @@ class _$AppModelCopyWithImpl<$Res, $Val extends AppModel>
     ) as $Val);
   }
 
+  /// Create a copy of AppModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserCopyWith<$Res>? get user {
@@ -99,6 +105,8 @@ class _$AppModelCopyWithImpl<$Res, $Val extends AppModel>
     });
   }
 
+  /// Create a copy of AppModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $FileOptionModelCopyWith<$Res>? get fileOpen {
@@ -141,6 +149,8 @@ class __$$AppModelImplCopyWithImpl<$Res>
       _$AppModelImpl _value, $Res Function(_$AppModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AppModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -225,7 +235,9 @@ class _$AppModelImpl extends _AppModel {
   int get hashCode => Object.hash(runtimeType, domainAccount, user, fileOpen,
       showUploadFileWidget, loginLoading);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AppModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AppModelImplCopyWith<_$AppModelImpl> get copyWith =>
@@ -252,8 +264,11 @@ abstract class _AppModel extends AppModel {
   bool get showUploadFileWidget;
   @override
   bool get loginLoading;
+
+  /// Create a copy of AppModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AppModelImplCopyWith<_$AppModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

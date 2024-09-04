@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:copy_with_extension/copy_with_extension.dart';
 import 'package:dd_js_util/dd_js_util.dart';
+import 'package:dd_js_util/model/models.dart';
 import 'package:fast_immutable_collections/fast_immutable_collections.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -21,6 +22,7 @@ import '../tool/part.dart';
 import '../ui/part.dart';
 import '../widget/part.dart';
 import 'base_result.dart';
+import 'fs_detail_info.dart';
 import 'my_file.dart';
 import 'my_fs_copy_api_param.dart';
 import 'my_fs_move_file_api_param.dart';
@@ -64,6 +66,19 @@ class FsListResult with _$FsListResult {
 }
 
 extension FsModelEx on FsModel {
+
+  //格式化大小
+  String get sizeFormat {
+    return ByteModel.create(size.toDouble()).format();
+  }
+
+  //获取详情
+  Future<FsDetailInfo> requestInfo() async {
+    return await MyFsDetailGetApi().request(RequestParams(loadingText: '获取链接',data: {
+      "path": simplePathUrl
+    }));
+  }
+
   ///删除文件
   Future<void> delete() async {
     // todo 删除

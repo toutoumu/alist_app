@@ -4,6 +4,7 @@ import 'dart:io';
 
 import 'package:copy_with_extension/copy_with_extension.dart';
 import 'package:dd_js_util/dd_js_util.dart';
+import 'package:dd_js_util/model/models.dart';
 import 'package:dio/dio.dart';
 import 'package:file_selector/file_selector.dart';
 import 'package:flutter/material.dart';

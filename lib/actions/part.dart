@@ -7,6 +7,7 @@ import 'package:async/async.dart';
 import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
 import 'package:collection/collection.dart';
 import 'package:dd_js_util/dd_js_util.dart';
+import 'package:dd_js_util/model/models.dart';
 import 'package:fast_immutable_collections/fast_immutable_collections.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

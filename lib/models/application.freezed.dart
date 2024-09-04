@@ -19,7 +19,9 @@ mixin _$ApplicationContext {
   BuildContext get context => throw _privateConstructorUsedError;
   WidgetRef get ref => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ApplicationContext
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ApplicationContextCopyWith<ApplicationContext> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -43,6 +45,8 @@ class _$ApplicationContextCopyWithImpl<$Res, $Val extends ApplicationContext>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ApplicationContext
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -81,6 +85,8 @@ class __$$ApplicationContextImplCopyWithImpl<$Res>
       $Res Function(_$ApplicationContextImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ApplicationContext
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -128,7 +134,9 @@ class _$ApplicationContextImpl extends _ApplicationContext {
   @override
   int get hashCode => Object.hash(runtimeType, context, ref);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ApplicationContext
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ApplicationContextImplCopyWith<_$ApplicationContextImpl> get copyWith =>
@@ -146,8 +154,11 @@ abstract class _ApplicationContext extends ApplicationContext {
   BuildContext get context;
   @override
   WidgetRef get ref;
+
+  /// Create a copy of ApplicationContext
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ApplicationContextImplCopyWith<_$ApplicationContextImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

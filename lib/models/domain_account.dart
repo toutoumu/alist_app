@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:copy_with_extension/copy_with_extension.dart';
 import 'package:dd_js_util/dd_js_util.dart';
+import 'package:dd_js_util/model/models.dart';
 import 'package:fast_immutable_collections/fast_immutable_collections.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -162,6 +163,8 @@ class DomainAccountState extends StateNotifier<DomainAccount> {
     }
   }
 
+
+
   ///登录
   Future<void> login(String username, String password) async {
     try {
@@ -217,6 +220,13 @@ class DomainAccountState extends StateNotifier<DomainAccount> {
 
   void refreshStoragesList() {
     _fetchStoragesList();
+  }
+
+  @override
+  set state(DomainAccount value) {
+    if(mounted){
+      super.state = value;
+    }
   }
 }
 
@@ -344,6 +354,10 @@ class DomainAccount extends ChangeNotifier {
   @igFreezedJson
   bool storageLoading = false;
 
+
+  @igFreezedJson
+  bool get isAdminer => authToken.isNotEmpty;
+
   ///检测在线状态
   Future<void> _checkPing() async {
     try {
@@ -468,6 +482,25 @@ class DomainAccount extends ChangeNotifier {
   @override
   String toString() {
     return jsonEncode(toJson());
+  }
+
+
+  @igFreezedJson
+  bool _isDiaposed = false;
+
+
+  @override
+  void dispose() {
+    _isDiaposed = true;
+    super.dispose();
+  }
+
+  @override
+  void notifyListeners() {
+    if(_isDiaposed){
+      return;
+    }
+    super.notifyListeners();
   }
 }
 

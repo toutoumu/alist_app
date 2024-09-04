@@ -21,7 +21,7 @@ class _FilesWidgetState extends ConsumerState<FilesWidget>
     with AutomaticKeepAliveClientMixin {
   late FsModel fsModel = widget.model;
   late FilesRepo repository = FilesRepo(fsModel.copyWith(context: context));
-
+  final _scrollController = ScrollController();
   @override
   Widget build(BuildContext context) {
     super.build(context);
@@ -29,8 +29,12 @@ class _FilesWidgetState extends ConsumerState<FilesWidget>
       return widget.model.setting.customUiWrapper?.call(model, list, child) ??
           Stack(
             children: [
-              MyLoadingMoreCustomScrollView(
-                slivers: [child],
+              CupertinoScrollbar(
+                controller: _scrollController,
+                child: MyLoadingMoreCustomScrollView(
+                  controller: _scrollController,
+                  slivers: [child],
+                ),
               ),
               LayoutBuilder(
                 builder: (context, constraints) {
@@ -90,6 +94,12 @@ class _FilesWidgetState extends ConsumerState<FilesWidget>
 
   @override
   bool get wantKeepAlive => true;
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
 }
 
 ///文件列表仓库

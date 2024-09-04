@@ -57,7 +57,7 @@ class FsItemLayout extends PlatformWidget {
   Widget buildWithMobile(BuildContext context, WidgetRef ref, DomainAccount domain) {
     return LayoutBuilder(builder: (c, size) {
       return MyButton(
-          leading: fsModel.getIcon(),
+          leading: fsModel.getIcon(thumbnail: fsModel.thumb),
           text: fsModel.name,
           subTitle: Text(fsModel.formatDateString),
           end: IconButton(

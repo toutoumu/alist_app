@@ -48,8 +48,12 @@ mixin _$VersionInfo {
   ///本地址,当前版本
   String? get currentVersion => throw _privateConstructorUsedError;
 
+  /// Serializes this VersionInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of VersionInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $VersionInfoCopyWith<VersionInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -88,6 +92,8 @@ class _$VersionInfoCopyWithImpl<$Res, $Val extends VersionInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of VersionInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -161,6 +167,8 @@ class _$VersionInfoCopyWithImpl<$Res, $Val extends VersionInfo>
     ) as $Val);
   }
 
+  /// Create a copy of VersionInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ProjectCopyWith<$Res> get project {
@@ -205,6 +213,8 @@ class __$$VersionInfoImplCopyWithImpl<$Res>
       _$VersionInfoImpl _value, $Res Function(_$VersionInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VersionInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -376,7 +386,7 @@ class _$VersionInfoImpl extends _VersionInfo {
                 other.currentVersion == currentVersion));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -394,7 +404,9 @@ class _$VersionInfoImpl extends _VersionInfo {
       versionNumber,
       currentVersion);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VersionInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$VersionInfoImplCopyWith<_$VersionInfoImpl> get copyWith =>
@@ -464,12 +476,15 @@ abstract class _VersionInfo extends VersionInfo {
   @override
   @JsonKey(name: 'versionNumber')
   String get versionNumber;
-  @override
 
   ///本地址,当前版本
-  String? get currentVersion;
   @override
-  @JsonKey(ignore: true)
+  String? get currentVersion;
+
+  /// Create a copy of VersionInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VersionInfoImplCopyWith<_$VersionInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -495,8 +510,12 @@ mixin _$Project {
   @JsonKey(name: 'previewUrl')
   String get previewUrl => throw _privateConstructorUsedError;
 
+  /// Serializes this Project to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Project
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ProjectCopyWith<Project> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -525,6 +544,8 @@ class _$ProjectCopyWithImpl<$Res, $Val extends Project>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Project
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -594,6 +615,8 @@ class __$$ProjectImplCopyWithImpl<$Res>
       _$ProjectImpl _value, $Res Function(_$ProjectImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Project
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -698,12 +721,14 @@ class _$ProjectImpl extends _Project {
                 other.previewUrl == previewUrl));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, description, downloadUrl, github,
       id, logo, name, previewUrl);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Project
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ProjectImplCopyWith<_$ProjectImpl> get copyWith =>
@@ -751,8 +776,11 @@ abstract class _Project extends Project {
   @override
   @JsonKey(name: 'previewUrl')
   String get previewUrl;
+
+  /// Create a copy of Project
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ProjectImplCopyWith<_$ProjectImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -25,8 +25,12 @@ mixin _$MyFsRenameParam {
   @JsonKey(name: 'rename_objects')
   List<RenameObjects> get renameObjects => throw _privateConstructorUsedError;
 
+  /// Serializes this MyFsRenameParam to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MyFsRenameParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MyFsRenameParamCopyWith<MyFsRenameParam> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$MyFsRenameParamCopyWithImpl<$Res, $Val extends MyFsRenameParam>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MyFsRenameParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$MyFsRenameParamImplCopyWithImpl<$Res>
       _$MyFsRenameParamImpl _value, $Res Function(_$MyFsRenameParamImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MyFsRenameParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -151,12 +159,14 @@ class _$MyFsRenameParamImpl extends _MyFsRenameParam {
                 .equals(other._renameObjects, _renameObjects));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, srcDir, const DeepCollectionEquality().hash(_renameObjects));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MyFsRenameParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MyFsRenameParamImplCopyWith<_$MyFsRenameParamImpl> get copyWith =>
@@ -188,8 +198,11 @@ abstract class _MyFsRenameParam extends MyFsRenameParam {
   @override
   @JsonKey(name: 'rename_objects')
   List<RenameObjects> get renameObjects;
+
+  /// Create a copy of MyFsRenameParam
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MyFsRenameParamImplCopyWith<_$MyFsRenameParamImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -205,8 +218,12 @@ mixin _$RenameObjects {
   @JsonKey(name: 'new_name')
   String get newName => throw _privateConstructorUsedError;
 
+  /// Serializes this RenameObjects to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RenameObjects
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RenameObjectsCopyWith<RenameObjects> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -232,6 +249,8 @@ class _$RenameObjectsCopyWithImpl<$Res, $Val extends RenameObjects>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RenameObjects
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -272,6 +291,8 @@ class __$$RenameObjectsImplCopyWithImpl<$Res>
       _$RenameObjectsImpl _value, $Res Function(_$RenameObjectsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RenameObjects
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -323,11 +344,13 @@ class _$RenameObjectsImpl extends _RenameObjects {
             (identical(other.newName, newName) || other.newName == newName));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, srcName, newName);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RenameObjects
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RenameObjectsImplCopyWith<_$RenameObjectsImpl> get copyWith =>
@@ -356,8 +379,11 @@ abstract class _RenameObjects extends RenameObjects {
   @override
   @JsonKey(name: 'new_name')
   String get newName;
+
+  /// Create a copy of RenameObjects
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RenameObjectsImplCopyWith<_$RenameObjectsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

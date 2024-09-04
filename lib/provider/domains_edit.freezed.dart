@@ -24,8 +24,12 @@ mixin _$DomainEditModel {
   bool get isEditorMode => throw _privateConstructorUsedError;
   IList<int> get selectIdList => throw _privateConstructorUsedError;
 
+  /// Serializes this DomainEditModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DomainEditModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DomainEditModelCopyWith<DomainEditModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$DomainEditModelCopyWithImpl<$Res, $Val extends DomainEditModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DomainEditModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class __$$DomainEditModelImplCopyWithImpl<$Res>
       _$DomainEditModelImpl _value, $Res Function(_$DomainEditModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DomainEditModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -144,12 +152,14 @@ class _$DomainEditModelImpl extends _DomainEditModel {
                 .equals(other.selectIdList, selectIdList));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, isEditorMode,
       const DeepCollectionEquality().hash(selectIdList));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DomainEditModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DomainEditModelImplCopyWith<_$DomainEditModelImpl> get copyWith =>
@@ -178,8 +188,11 @@ abstract class _DomainEditModel extends DomainEditModel {
   bool get isEditorMode;
   @override
   IList<int> get selectIdList;
+
+  /// Create a copy of DomainEditModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DomainEditModelImplCopyWith<_$DomainEditModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

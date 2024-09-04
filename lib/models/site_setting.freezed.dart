@@ -77,8 +77,12 @@ mixin _$SiteSetting {
   @JsonKey(name: 'video_autoplay')
   String get videoAutoplay => throw _privateConstructorUsedError;
 
+  /// Serializes this SiteSetting to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SiteSetting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SiteSettingCopyWith<SiteSetting> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -131,6 +135,8 @@ class _$SiteSettingCopyWithImpl<$Res, $Val extends SiteSetting>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SiteSetting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -328,6 +334,8 @@ class __$$SiteSettingImplCopyWithImpl<$Res>
       _$SiteSettingImpl _value, $Res Function(_$SiteSettingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SiteSetting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -665,7 +673,7 @@ class _$SiteSettingImpl extends _SiteSetting {
                 other.videoAutoplay == videoAutoplay));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -699,7 +707,9 @@ class _$SiteSettingImpl extends _SiteSetting {
         videoAutoplay
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SiteSetting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SiteSettingImplCopyWith<_$SiteSettingImpl> get copyWith =>
@@ -834,8 +844,11 @@ abstract class _SiteSetting extends SiteSetting {
   @override
   @JsonKey(name: 'video_autoplay')
   String get videoAutoplay;
+
+  /// Create a copy of SiteSetting
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SiteSettingImplCopyWith<_$SiteSettingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

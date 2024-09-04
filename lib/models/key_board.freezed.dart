@@ -95,6 +95,9 @@ class _$TvKeyCopyWithImpl<$Res, $Val extends TvKey>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of TvKey
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -111,6 +114,9 @@ class __$$TvKeyUpImplCopyWithImpl<$Res>
   __$$TvKeyUpImplCopyWithImpl(
       _$TvKeyUpImpl _value, $Res Function(_$TvKeyUpImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of TvKey
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -238,6 +244,9 @@ class __$$TvKeyDownImplCopyWithImpl<$Res>
   __$$TvKeyDownImplCopyWithImpl(
       _$TvKeyDownImpl _value, $Res Function(_$TvKeyDownImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of TvKey
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -365,6 +374,9 @@ class __$$TvKeyLeftImplCopyWithImpl<$Res>
   __$$TvKeyLeftImplCopyWithImpl(
       _$TvKeyLeftImpl _value, $Res Function(_$TvKeyLeftImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of TvKey
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -492,6 +504,9 @@ class __$$TvKeyRightImplCopyWithImpl<$Res>
   __$$TvKeyRightImplCopyWithImpl(
       _$TvKeyRightImpl _value, $Res Function(_$TvKeyRightImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of TvKey
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -619,6 +634,9 @@ class __$$TvKeyOkImplCopyWithImpl<$Res>
   __$$TvKeyOkImplCopyWithImpl(
       _$TvKeyOkImpl _value, $Res Function(_$TvKeyOkImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of TvKey
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -746,6 +764,9 @@ class __$$TvKeyUnknownImplCopyWithImpl<$Res>
   __$$TvKeyUnknownImplCopyWithImpl(
       _$TvKeyUnknownImpl _value, $Res Function(_$TvKeyUnknownImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of TvKey
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

@@ -25,8 +25,12 @@ mixin _$DownloadParam {
   @JsonKey(name: 'url')
   String get url => throw _privateConstructorUsedError;
 
+  /// Serializes this DownloadParam to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DownloadParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DownloadParamCopyWith<DownloadParam> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$DownloadParamCopyWithImpl<$Res, $Val extends DownloadParam>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DownloadParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -90,6 +96,8 @@ class __$$DownloadParamImplCopyWithImpl<$Res>
       _$DownloadParamImpl _value, $Res Function(_$DownloadParamImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DownloadParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -141,11 +149,13 @@ class _$DownloadParamImpl extends _DownloadParam {
             (identical(other.url, url) || other.url == url));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, path, url);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DownloadParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DownloadParamImplCopyWith<_$DownloadParamImpl> get copyWith =>
@@ -174,8 +184,11 @@ abstract class _DownloadParam extends DownloadParam {
   @override
   @JsonKey(name: 'url')
   String get url;
+
+  /// Create a copy of DownloadParam
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DownloadParamImplCopyWith<_$DownloadParamImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

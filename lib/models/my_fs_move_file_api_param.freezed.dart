@@ -27,8 +27,12 @@ mixin _$MyFsMoveFileApiParam {
   @JsonKey(name: 'names')
   List<String> get names => throw _privateConstructorUsedError;
 
+  /// Serializes this MyFsMoveFileApiParam to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MyFsMoveFileApiParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MyFsMoveFileApiParamCopyWith<MyFsMoveFileApiParam> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$MyFsMoveFileApiParamCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MyFsMoveFileApiParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -102,6 +108,8 @@ class __$$MyFsMoveFileApiParamImplCopyWithImpl<$Res>
       $Res Function(_$MyFsMoveFileApiParamImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MyFsMoveFileApiParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -169,12 +177,14 @@ class _$MyFsMoveFileApiParamImpl extends _MyFsMoveFileApiParam {
             const DeepCollectionEquality().equals(other._names, _names));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, srcDir, dstDir, const DeepCollectionEquality().hash(_names));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MyFsMoveFileApiParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MyFsMoveFileApiParamImplCopyWith<_$MyFsMoveFileApiParamImpl>
@@ -210,8 +220,11 @@ abstract class _MyFsMoveFileApiParam extends MyFsMoveFileApiParam {
   @override
   @JsonKey(name: 'names')
   List<String> get names;
+
+  /// Create a copy of MyFsMoveFileApiParam
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MyFsMoveFileApiParamImplCopyWith<_$MyFsMoveFileApiParamImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

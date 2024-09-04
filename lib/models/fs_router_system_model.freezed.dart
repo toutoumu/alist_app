@@ -23,8 +23,12 @@ mixin _$FsRouterSystemModel {
   ///当前文件路由
   IList<FsModel> get router => throw _privateConstructorUsedError;
 
+  /// Serializes this FsRouterSystemModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FsRouterSystemModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FsRouterSystemModelCopyWith<FsRouterSystemModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$FsRouterSystemModelCopyWithImpl<$Res, $Val extends FsRouterSystemModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FsRouterSystemModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -81,6 +87,8 @@ class __$$FsRouterSystemModelImplCopyWithImpl<$Res>
       $Res Function(_$FsRouterSystemModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FsRouterSystemModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -122,12 +130,14 @@ class _$FsRouterSystemModelImpl extends _FsRouterSystemModel {
             const DeepCollectionEquality().equals(other.router, router));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(router));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FsRouterSystemModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FsRouterSystemModelImplCopyWith<_$FsRouterSystemModelImpl> get copyWith =>
@@ -150,12 +160,14 @@ abstract class _FsRouterSystemModel extends FsRouterSystemModel {
   factory _FsRouterSystemModel.fromJson(Map<String, dynamic> json) =
       _$FsRouterSystemModelImpl.fromJson;
 
-  @override
-
   ///当前文件路由
-  IList<FsModel> get router;
   @override
-  @JsonKey(ignore: true)
+  IList<FsModel> get router;
+
+  /// Create a copy of FsRouterSystemModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FsRouterSystemModelImplCopyWith<_$FsRouterSystemModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

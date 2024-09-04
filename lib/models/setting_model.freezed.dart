@@ -27,8 +27,12 @@ mixin _$SettingModel {
   String? get subTitle => throw _privateConstructorUsedError;
   int get sort => throw _privateConstructorUsedError;
 
+  /// Serializes this SettingModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SettingModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SettingModelCopyWith<SettingModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$SettingModelCopyWithImpl<$Res, $Val extends SettingModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SettingModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -108,6 +114,8 @@ class __$$SettingModelImplCopyWithImpl<$Res>
       _$SettingModelImpl _value, $Res Function(_$SettingModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SettingModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -179,11 +187,13 @@ class _$SettingModelImpl extends _SettingModel {
             (identical(other.sort, sort) || other.sort == sort));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, title, child, subTitle, sort);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SettingModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SettingModelImplCopyWith<_$SettingModelImpl> get copyWith =>
@@ -218,8 +228,11 @@ abstract class _SettingModel extends SettingModel {
   String? get subTitle;
   @override
   int get sort;
+
+  /// Create a copy of SettingModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SettingModelImplCopyWith<_$SettingModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

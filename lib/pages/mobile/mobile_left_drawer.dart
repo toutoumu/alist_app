@@ -30,22 +30,7 @@ class MobileLeftDrawerWidget extends ConsumerWidget {
                         const Divider(),
                         Text('切换站点', style: context.textTheme.labelSmall),
                         ...data.map((e) {
-                          return ListTile(
-                              leading: DomainLogo(item: e)
-                                  .constraintBox((size, child) => SizedBox(
-                                        width: 18,
-                                        height: 18,
-                                        child: child,
-                                      )),
-                              title: Text(e.name),
-                              onTap: () {
-                                context.hideKeyBoard();
-                                context.nav.pop();
-                                Future.microtask(() => ref.switchApplication(e));
-                              },
-                              trailing: e.isEq(ref.activeDomain)
-                                  ? const Icon(LineIcons.check)
-                                  : null);
+                          return _Item(item: e);
                         }),
                         const Divider(),
                         ListTile(
@@ -87,4 +72,40 @@ class MobileLeftDrawerWidget extends ConsumerWidget {
       },
     );
   }
+}
+
+class _Item extends ConsumerStatefulWidget {
+  final DomainAccount item;
+
+  const _Item({required this.item});
+
+  @override
+  ConsumerState<_Item> createState() => _ItemState();
+}
+
+class _ItemState extends ConsumerState<_Item> with AutomaticKeepAliveClientMixin {
+  late DomainAccount item = widget.item;
+
+  @override
+  Widget build(BuildContext context) {
+    super.build(context);
+    return pp.ChangeNotifierProvider(
+        create: (BuildContext context) {
+          return item..startGetState();
+        },
+        child: ListTile(
+            leading: const DomainLogo(),
+            title: Text(item.name),
+            onTap: () {
+              context.hideKeyBoard();
+              context.nav.pop();
+              Future.microtask(() => ref.switchApplication(item));
+            },
+            trailing: item.isEq(ref.activeDomain)
+                ? const Icon(LineIcons.check)
+                : null));
+  }
+
+  @override
+  bool get wantKeepAlive => true;
 }

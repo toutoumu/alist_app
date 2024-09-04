@@ -21,7 +21,9 @@ mixin _$PreviewParam {
   @igFreezedJson
   FsModel get fsModel => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PreviewParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PreviewParamCopyWith<PreviewParam> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +49,8 @@ class _$PreviewParamCopyWithImpl<$Res, $Val extends PreviewParam>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PreviewParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +91,8 @@ class __$$PreviewParamImplCopyWithImpl<$Res>
       _$PreviewParamImpl _value, $Res Function(_$PreviewParamImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PreviewParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -139,7 +145,9 @@ class _$PreviewParamImpl extends _PreviewParam {
   @override
   int get hashCode => Object.hash(runtimeType, fileRawUrl, fsModel);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PreviewParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PreviewParamImplCopyWith<_$PreviewParamImpl> get copyWith =>
@@ -158,8 +166,11 @@ abstract class _PreviewParam extends PreviewParam {
   @override
   @igFreezedJson
   FsModel get fsModel;
+
+  /// Create a copy of PreviewParam
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PreviewParamImplCopyWith<_$PreviewParamImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -96,6 +96,9 @@ class _$GlobalErrorCopyWithImpl<$Res, $Val extends GlobalError>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of GlobalError
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -117,6 +120,8 @@ class __$$ApiErrorImplCopyWithImpl<$Res>
       _$ApiErrorImpl _value, $Res Function(_$ApiErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GlobalError
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -130,6 +135,8 @@ class __$$ApiErrorImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of GlobalError
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $BaseApiExceptionCopyWith<$Res> get exception {
@@ -159,7 +166,9 @@ class _$ApiErrorImpl extends ApiError {
   @override
   int get hashCode => Object.hash(runtimeType, exception);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GlobalError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ApiErrorImplCopyWith<_$ApiErrorImpl> get copyWith =>
@@ -257,7 +266,10 @@ abstract class ApiError extends GlobalError {
   ApiError._() : super._();
 
   BaseApiException get exception;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GlobalError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ApiErrorImplCopyWith<_$ApiErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -279,6 +291,8 @@ class __$$BizErrorImplCopyWithImpl<$Res>
       _$BizErrorImpl _value, $Res Function(_$BizErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GlobalError
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -312,7 +326,9 @@ class _$BizErrorImpl extends BizError {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GlobalError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BizErrorImplCopyWith<_$BizErrorImpl> get copyWith =>
@@ -410,7 +426,10 @@ abstract class BizError extends GlobalError {
   BizError._() : super._();
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GlobalError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BizErrorImplCopyWith<_$BizErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -429,6 +448,9 @@ class __$$DecodeErrorImplCopyWithImpl<$Res>
   __$$DecodeErrorImplCopyWithImpl(
       _$DecodeErrorImpl _value, $Res Function(_$DecodeErrorImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of GlobalError
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -551,6 +573,9 @@ class __$$RequestCancelErrorImplCopyWithImpl<$Res>
   __$$RequestCancelErrorImplCopyWithImpl(_$RequestCancelErrorImpl _value,
       $Res Function(_$RequestCancelErrorImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of GlobalError
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -673,6 +698,9 @@ class __$$TokenExpireErrorImplCopyWithImpl<$Res>
   __$$TokenExpireErrorImplCopyWithImpl(_$TokenExpireErrorImpl _value,
       $Res Function(_$TokenExpireErrorImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of GlobalError
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -795,6 +823,9 @@ class __$$NoPermissionErrorImplCopyWithImpl<$Res>
   __$$NoPermissionErrorImplCopyWithImpl(_$NoPermissionErrorImpl _value,
       $Res Function(_$NoPermissionErrorImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of GlobalError
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

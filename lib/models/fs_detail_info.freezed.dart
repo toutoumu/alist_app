@@ -44,8 +44,12 @@ mixin _$FsDetailInfo {
   @ignore
   DartTypeModel get related => throw _privateConstructorUsedError;
 
+  /// Serializes this FsDetailInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FsDetailInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FsDetailInfoCopyWith<FsDetailInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -84,6 +88,8 @@ class _$FsDetailInfoCopyWithImpl<$Res, $Val extends FsDetailInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FsDetailInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -147,6 +153,8 @@ class _$FsDetailInfoCopyWithImpl<$Res, $Val extends FsDetailInfo>
     ) as $Val);
   }
 
+  /// Create a copy of FsDetailInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DartTypeModelCopyWith<$Res> get related {
@@ -191,6 +199,8 @@ class __$$FsDetailInfoImplCopyWithImpl<$Res>
       _$FsDetailInfoImpl _value, $Res Function(_$FsDetailInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FsDetailInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -337,12 +347,14 @@ class _$FsDetailInfoImpl extends _FsDetailInfo {
             (identical(other.related, related) || other.related == related));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, size, isDir, modified,
       sign, thumb, type, rawUrl, readme, provider, related);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FsDetailInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FsDetailInfoImplCopyWith<_$FsDetailInfoImpl> get copyWith =>
@@ -410,8 +422,11 @@ abstract class _FsDetailInfo extends FsDetailInfo {
   @JsonKey(name: 'related', fromJson: toDartModel)
   @ignore
   DartTypeModel get related;
+
+  /// Create a copy of FsDetailInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FsDetailInfoImplCopyWith<_$FsDetailInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

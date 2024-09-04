@@ -19,7 +19,9 @@ mixin _$SelectFolderModel {
   FsModel? get selectModel => throw _privateConstructorUsedError;
   String? get path => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SelectFolderModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SelectFolderModelCopyWith<SelectFolderModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -43,6 +45,8 @@ class _$SelectFolderModelCopyWithImpl<$Res, $Val extends SelectFolderModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SelectFolderModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -81,6 +85,8 @@ class __$$SelectFolderModelImplCopyWithImpl<$Res>
       $Res Function(_$SelectFolderModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SelectFolderModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -128,7 +134,9 @@ class _$SelectFolderModelImpl extends _SelectFolderModel {
   @override
   int get hashCode => Object.hash(runtimeType, selectModel, path);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SelectFolderModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SelectFolderModelImplCopyWith<_$SelectFolderModelImpl> get copyWith =>
@@ -146,8 +154,11 @@ abstract class _SelectFolderModel extends SelectFolderModel {
   FsModel? get selectModel;
   @override
   String? get path;
+
+  /// Create a copy of SelectFolderModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SelectFolderModelImplCopyWith<_$SelectFolderModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -27,8 +27,12 @@ mixin _$MyFsCopyApiParam {
   @JsonKey(name: 'names')
   List<String> get names => throw _privateConstructorUsedError;
 
+  /// Serializes this MyFsCopyApiParam to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MyFsCopyApiParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MyFsCopyApiParamCopyWith<MyFsCopyApiParam> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$MyFsCopyApiParamCopyWithImpl<$Res, $Val extends MyFsCopyApiParam>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MyFsCopyApiParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -101,6 +107,8 @@ class __$$MyFsCopyApiParamImplCopyWithImpl<$Res>
       $Res Function(_$MyFsCopyApiParamImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MyFsCopyApiParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -168,12 +176,14 @@ class _$MyFsCopyApiParamImpl extends _MyFsCopyApiParam {
             const DeepCollectionEquality().equals(other._names, _names));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, srcDir, dstDir, const DeepCollectionEquality().hash(_names));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MyFsCopyApiParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MyFsCopyApiParamImplCopyWith<_$MyFsCopyApiParamImpl> get copyWith =>
@@ -208,8 +218,11 @@ abstract class _MyFsCopyApiParam extends MyFsCopyApiParam {
   @override
   @JsonKey(name: 'names')
   List<String> get names;
+
+  /// Create a copy of MyFsCopyApiParam
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MyFsCopyApiParamImplCopyWith<_$MyFsCopyApiParamImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

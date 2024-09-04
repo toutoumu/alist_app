@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:dd_js_util/dd_js_util.dart';
+import 'package:dd_js_util/model/models.dart';
 import 'package:dd_js_util/theme/model.dart';
 import 'package:fast_immutable_collections/fast_immutable_collections.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +32,6 @@ Future<void> main() async {
   runApp(const ProviderScope(child: MyApp()));
 }
 
-///
 class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
@@ -60,7 +60,6 @@ class MyApp extends ConsumerWidget {
               builder: (ctx, widget) {
                 return MediaQuery(
                     data: MediaQuery.of(ctx).copyWith(
-                        boldText: false,
                         textScaler: TextScaler.linear(myPlatform.whenOrNull(
                               macos: () => ref.appSetting.fontZoom,
                               ios: () => ref.appSetting.fontZoom,

@@ -26,8 +26,12 @@ mixin _$MyFsRecursiveMoveApiParam {
   @JsonKey(name: 'dst_dir')
   String get dstDir => throw _privateConstructorUsedError;
 
+  /// Serializes this MyFsRecursiveMoveApiParam to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MyFsRecursiveMoveApiParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MyFsRecursiveMoveApiParamCopyWith<MyFsRecursiveMoveApiParam> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$MyFsRecursiveMoveApiParamCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MyFsRecursiveMoveApiParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -97,6 +103,8 @@ class __$$MyFsRecursiveMoveApiParamImplCopyWithImpl<$Res>
       $Res Function(_$MyFsRecursiveMoveApiParamImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MyFsRecursiveMoveApiParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -148,11 +156,13 @@ class _$MyFsRecursiveMoveApiParamImpl extends _MyFsRecursiveMoveApiParam {
             (identical(other.dstDir, dstDir) || other.dstDir == dstDir));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, srcDir, dstDir);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MyFsRecursiveMoveApiParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MyFsRecursiveMoveApiParamImplCopyWith<_$MyFsRecursiveMoveApiParamImpl>
@@ -183,8 +193,11 @@ abstract class _MyFsRecursiveMoveApiParam extends MyFsRecursiveMoveApiParam {
   @override
   @JsonKey(name: 'dst_dir')
   String get dstDir;
+
+  /// Create a copy of MyFsRecursiveMoveApiParam
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MyFsRecursiveMoveApiParamImplCopyWith<_$MyFsRecursiveMoveApiParamImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -20,7 +20,9 @@ mixin _$FileHandleMenu {
   List<FileType> get supports => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FileHandleMenu
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FileHandleMenuCopyWith<FileHandleMenu> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -44,6 +46,8 @@ class _$FileHandleMenuCopyWithImpl<$Res, $Val extends FileHandleMenu>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FileHandleMenu
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -82,6 +86,8 @@ class __$$FileHandleMenuImplCopyWithImpl<$Res>
       _$FileHandleMenuImpl _value, $Res Function(_$FileHandleMenuImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FileHandleMenu
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -140,7 +146,9 @@ class _$FileHandleMenuImpl implements _FileHandleMenu {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_supports), title);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FileHandleMenu
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FileHandleMenuImplCopyWith<_$FileHandleMenuImpl> get copyWith =>
@@ -153,14 +161,16 @@ abstract class _FileHandleMenu implements FileHandleMenu {
       {required final List<FileType> supports,
       required final String title}) = _$FileHandleMenuImpl;
 
-  @override
-
   ///支持的文件
+  @override
   List<FileType> get supports;
   @override
   String get title;
+
+  /// Create a copy of FileHandleMenu
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FileHandleMenuImplCopyWith<_$FileHandleMenuImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

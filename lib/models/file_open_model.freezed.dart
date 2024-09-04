@@ -19,7 +19,9 @@ mixin _$FileOptionModel {
   FileAction get action => throw _privateConstructorUsedError;
   FsModel get fsModel => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FileOptionModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FileOptionModelCopyWith<FileOptionModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -43,6 +45,8 @@ class _$FileOptionModelCopyWithImpl<$Res, $Val extends FileOptionModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FileOptionModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -81,6 +85,8 @@ class __$$FileOptionModelImplCopyWithImpl<$Res>
       _$FileOptionModelImpl _value, $Res Function(_$FileOptionModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FileOptionModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,7 +133,9 @@ class _$FileOptionModelImpl implements _FileOptionModel {
   @override
   int get hashCode => Object.hash(runtimeType, action, fsModel);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FileOptionModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FileOptionModelImplCopyWith<_$FileOptionModelImpl> get copyWith =>
@@ -144,8 +152,11 @@ abstract class _FileOptionModel implements FileOptionModel {
   FileAction get action;
   @override
   FsModel get fsModel;
+
+  /// Create a copy of FileOptionModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FileOptionModelImplCopyWith<_$FileOptionModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

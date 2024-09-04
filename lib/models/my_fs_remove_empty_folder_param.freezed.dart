@@ -24,8 +24,12 @@ mixin _$MyFsRemoveEmptyFolderParam {
   @JsonKey(name: 'src_dir')
   String get srcDir => throw _privateConstructorUsedError;
 
+  /// Serializes this MyFsRemoveEmptyFolderParam to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MyFsRemoveEmptyFolderParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MyFsRemoveEmptyFolderParamCopyWith<MyFsRemoveEmptyFolderParam>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$MyFsRemoveEmptyFolderParamCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MyFsRemoveEmptyFolderParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +93,8 @@ class __$$MyFsRemoveEmptyFolderParamImplCopyWithImpl<$Res>
       $Res Function(_$MyFsRemoveEmptyFolderParamImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MyFsRemoveEmptyFolderParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -129,11 +137,13 @@ class _$MyFsRemoveEmptyFolderParamImpl extends _MyFsRemoveEmptyFolderParam {
             (identical(other.srcDir, srcDir) || other.srcDir == srcDir));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, srcDir);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MyFsRemoveEmptyFolderParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MyFsRemoveEmptyFolderParamImplCopyWith<_$MyFsRemoveEmptyFolderParamImpl>
@@ -160,8 +170,11 @@ abstract class _MyFsRemoveEmptyFolderParam extends MyFsRemoveEmptyFolderParam {
   @override
   @JsonKey(name: 'src_dir')
   String get srcDir;
+
+  /// Create a copy of MyFsRemoveEmptyFolderParam
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MyFsRemoveEmptyFolderParamImplCopyWith<_$MyFsRemoveEmptyFolderParamImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
